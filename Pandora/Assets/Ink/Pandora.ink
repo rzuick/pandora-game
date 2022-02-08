@@ -88,6 +88,7 @@ You are shocked at your father's news. Being queen would bring your family and v
 - "Baba, this is too great of an opportunity to pass up. With your blessing, I will go and visit the capital. Even if I am not chosen, I can still make great friends for our people."
     -> first_encounter
 + [Decline the invitation and stay.]
+    -> the_end.end_2
 
 === first_encounter ===
 Your father packs a small bag of essentials for your journey to the capital. You leave, wishing him well in your absence. As you leave the village, you encounter a young boy, no more than 9 years old, sitting along the dirt road that leads in and out. 
@@ -101,6 +102,7 @@ You greet the boy and note the thirst that tightens his mouth and the way his sh
     "Here, child. Once you are done, go into the village and look for the chief. Tell him his Pandora has sent you and he will feed and clothe you."
     -> second_encounter
 + [Ignore the boy and keep walking.]
+    -> second_encounter
 You continue on your way, determined to not be sidetracked again.
 
 === second_encounter ===
