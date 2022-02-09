@@ -12,6 +12,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
 
+    [Header("Choices UI")]
+    [SerializeField] private GameObject[] choices;
+    private TextMeshProUGUI[] choicesText;
+
     private Story currentStory;
     public bool dialogueIsPlaying {get; private set;}
     private static DialogueManager instance;
@@ -31,6 +35,14 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+
+        // now we get all possible choices text
+        choicesText = new TextMeshProUGUI[choices.Length];
+        int index = 0;
+        foreach (GameObject choice in choices) {
+            choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+            index ++;
+        }
         
     }
     private void Update()
@@ -38,10 +50,13 @@ public class DialogueManager : MonoBehaviour
         if (!dialogueIsPlaying) {
             return;
         }
-
-        if (currentStory.currentChoices.Count == 0 && Input.GetKeyDown("i")) {
+        // currentStory.currentChoices.Count == 0 && 
+        if (Input.GetKeyDown("i")) {
             // function to continue story
             ContinueStory();
+        }
+        else if (Input.GetKeyDown("e")) {
+            ExitDialogue();
         }
     }
     public void EnterDialogueMode(TextAsset inkJson) 
@@ -55,11 +70,10 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory() 
     {
+        Debug.Log("story can continue: "+ currentStory.canContinue);
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
-        }
-        if (Input.GetKeyDown("e")) {
-            ExitDialogue();
+            DisplayChoices();
         }
     }
     private void ExitDialogue() 
@@ -68,4 +82,43 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text="";
     }
+
+    private void DisplayChoices()
+    {
+        // populate a list of currentChoices to track what has been selected
+        List<Choice> currentChoices = currentStory.currentChoices;
+        if (currentChoices.Count > choices.Length) {
+            Debug.LogError("There are more choice options than valid choices: "+ currentChoices.Count);
+        }
+        int index = 0;
+        // now we need to set each choice Object to have the text value of the text choice from ink
+        foreach (Choice choice in currentChoices) {
+            choices[index].gameObject.SetActive(true);
+            choicesText[index].text = choice.text;
+            index++;
+        }
+        // go through remaining choices TextMeshProUGUI supports and hide any unused ones
+        //what we left off with from the previous loop
+        for (int i = index; i < choices.Length; i++) {
+            choices[i].gameObject.SetActive(false);
+        }
+        StartCoroutine(SelectFirstChoice());
+    }
+
+    private IEnumerator SelectFirstChoice()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        yield return new WaitForEndOfFrame();
+        EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+    }
+
+    public void MakeChoice(int choiceIndex) {
+        // will allow unity to locate the index of the choice selected
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        // will allow unity to continue to story progression, if there is any, after choice was selected
+        ContinueStory();
+    } 
+    
+
+    
 }
