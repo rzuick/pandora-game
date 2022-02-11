@@ -1,26 +1,30 @@
-Home, at the beginning of another dull day.
+INCLUDE Introduction
 -> home
-
 === home ===
 You woke up early this morning, like usual. However, there seems to be something in the air, something that spells...change. 
 
 What will you do?
 
 + [Ignore things and go about your chores as usual.]
-    The garden is a perfect place to begin your chores. You grab a jug of water and a bowl of berries and take them along with you. Better to eat on the run than not at all. 
+    The garden is a perfect place to begin your chores. You grab a jug of water and a bowl of berries and take them along with you. Better to eat on the run than not at all.
+    [Head to garden]
     -> garden
 + [Walk around the village. Maybe someone knows something?]
     You head towards the village market, near the center of town.
+    [Head to market]
     -> market
     
 === market ===
 The market is quiet, not surprisingly. Your father insists that you be up early, but the rest of the people in this small village seem to enjoy their sleep.
 + [Head to the garden?]
     - You are bored, but there is one thing that always cheers you up: the garden! You head that way.
-    -> garden
+    [Walk to the garden]
+    ->END
 + [Take a nap]
     - No one would notice if you dozed off for a little and then went home...right?
-    -> news
+    [...]
+    [See what Baba is up to]
+    ->END
 
 === garden ===
 Gardening is the one chore you don't mind as much. Being the daughter of the village's chief means that there is always something more to do. 
@@ -51,8 +55,7 @@ Snakes have been said to be omens of great fortune or terrible misfortune.
     -> news
     
 === snake_friend === 
-"Greetingssss to you, young human. Thank you for this ssssmall kindnesssss.
-- I have been long wandering for ssssome ssssuch gesture."
+"Greetingssss to you, young human. Thank you for this ssssmall kindnesssss. I have been long wandering for ssssome ssssuch gesture."
 
 Surprised as you are, you manage to dip your head in acknowledgement. Now is not the 
 -time to be rude.
@@ -86,12 +89,13 @@ You are shocked at your father's news. Being queen would bring your family and v
 
 + [Accept the invitation and leave?]
 - "Baba, this is too great of an opportunity to pass up. With your blessing, I will go and visit the capital. Even if I am not chosen, I can still make great friends for our people."
+Your father packs a small bag of essentials for your journey to the capital. You leave, wishing him well in your absence.  
     -> first_encounter
 + [Decline the invitation and stay.]
     -> the_end.end_2
 
 === first_encounter ===
-Your father packs a small bag of essentials for your journey to the capital. You leave, wishing him well in your absence. As you leave the village, you encounter a young boy, no more than 9 years old, sitting along the dirt road that leads in and out. 
+As you leave the village, you encounter a young boy, no more than 9 years old, sitting along the dirt road that leads in and out.
 
 You greet the boy and note the thirst that tightens his mouth and the way his shirt fits too loosely on his torso.
 

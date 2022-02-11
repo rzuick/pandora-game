@@ -11,14 +11,15 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private GameObject continueIcon;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
-
     private Story currentStory;
     public bool dialogueIsPlaying {get; private set;}
     private static DialogueManager instance;
+
     private void Awake() 
     {
         if (instance != null) {
@@ -51,7 +52,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         // currentStory.currentChoices.Count == 0 && 
-        if (Input.GetKeyDown("i")) {
+        if (Input.GetKeyDown("return") || Input.GetKeyDown("enter")) {
             // function to continue story
             ContinueStory();
         }
@@ -59,12 +60,12 @@ public class DialogueManager : MonoBehaviour
             ExitDialogue();
         }
     }
+    // inkKnot = DialogueTrigger.GetInstance().inkKnot;
     public void EnterDialogueMode(TextAsset inkJson) 
     {
         currentStory = new Story(inkJson.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-        
         ContinueStory();
     }
 
@@ -73,7 +74,12 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("story can continue: "+ currentStory.canContinue);
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
+            Debug.Log("current choices: "+ currentStory.currentChoices.Count);
             DisplayChoices();
+            continueIcon.SetActive(true);
+        }
+        else {
+            continueIcon.SetActive(false);
         }
     }
     private void ExitDialogue() 

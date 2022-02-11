@@ -23,8 +23,8 @@ public class RubyController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = rigidbody2D.position;
-        position.x = position.x + 5.0f * horizontal * Time.deltaTime;
-        position.y = position.y + 5.0f * vertical * Time.deltaTime;
+        position.x = position.x + 12.0f * horizontal * Time.deltaTime;
+        position.y = position.y + 12.0f * vertical * Time.deltaTime;
         
         rigidbody2D.MovePosition(position);
     }
