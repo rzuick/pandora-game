@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 1371321921}
   - component: {fileID: 1371321923}
   - component: {fileID: 1371321922}
+  - component: {fileID: 1371321924}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -505,14 +506,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "There was once a small, but fruitful kingdom.\n \nThe kingdom was ruled
-    by a historied line of monarchs who, above all, lived to serve their subjects.\nInside
-    this kingdom there were smaller villages led by local chiefs.\n\nThe chiefs in
-    these villages looked out for their villagers while also ensuring the monarch's
-    rule was followed.\nThe kingdom long lived in peace, though there were growing
-    whispers among the villagers.\n\nThe current king had no heir. He was growing
-    old and could meet the ancestors at any time. \nIf he died, what would happen
-    to the kingdom in his absence?\n\nThis is the story of such a time..."
+  m_text: "There was once a small, but fruitful kingdom, blessed to be ruled by monarchs
+    who, above all, lived to serve their subjects.\n\nGreat as they were, the good
+    monarchs of past had always been supported by local leaders, the village chiefs.
+    \n\nThese were the people who knew exactly what ailed the kingdom and what the
+    monarchy could do to heal it instead.\n\nThe kingdom long lived in peace.\n\n~\n\nThen
+    came a time when that peace was threatened. \n\nThe current king had no heir.
+    While his kingdom continued to thrive, he grew old and weary. \n\nIf he died,
+    the people whispered, what would happen to the kingdom in his absence?\n\nThis
+    is the story of such a time and the unlikely hero of the kingdom..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -539,10 +541,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -589,3 +591,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371321920}
   m_CullTransparentMesh: 1
+--- !u!114 &1371321924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371321920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b4169e8df7240a0b1ac22b42b54ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToLoadNewScene: 55
+  typeSpeed: 0.075
+  LevelName: Game

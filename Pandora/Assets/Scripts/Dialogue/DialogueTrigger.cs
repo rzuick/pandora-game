@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject visualCue;
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
-    
+    public bool finalTrigger;
     private static DialogueTrigger instance;
     public static DialogueTrigger GetInstance() {
         return instance;
@@ -20,6 +20,7 @@ public class DialogueTrigger : MonoBehaviour
     
     private void Awake() 
     {
+        finalTrigger = false;
         playerInRange = false;
         visualCue.SetActive(false);
     }
@@ -29,7 +30,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (playerInRange) {
             visualCue.SetActive(true);
-            Debug.Log("Visual cue active:" + visualCue.activeSelf);
+            // Debug.Log("Visual cue active:" + visualCue.activeSelf);
             if (Input.GetKeyDown("i")) {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
@@ -45,7 +46,10 @@ public class DialogueTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             playerInRange = true;
         }
-        Debug.Log("Collision by:" + other + "Player in range: "+ playerInRange);
+        if(gameObject.tag == "FinalEvent") {
+            finalTrigger = true;
+        }
+        // Debug.Log("Collision by:" + other + "Player in range: "+ playerInRange);
     }
 
     void OnTriggerExit2D(Collider2D other)

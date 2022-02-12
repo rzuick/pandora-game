@@ -2625,7 +2625,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.27045515, y: 0.040109098}
+  m_Offset: {x: -0.28432482, y: -0.03185095}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2636,7 +2636,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9793305, y: 0.5722821}
+  m_Size: {x: 0.95159113, y: 0.42836198}
   m_EdgeRadius: 0
 --- !u!212 &261222117
 SpriteRenderer:
@@ -3522,7 +3522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb51ee147a7941c593d4a726a330c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactPressed: 0
 --- !u!1 &359337436
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,6 +7509,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 161604322631527621, guid: 01acef13d5b494da4aa3378a4133c13d, type: 3}
       propertyPath: m_Name
+      value: PlayerDad
+      objectReference: {fileID: 0}
+    - target: {fileID: 161604322631527621, guid: 01acef13d5b494da4aa3378a4133c13d, type: 3}
+      propertyPath: m_TagString
       value: PlayerDad
       objectReference: {fileID: 0}
     - target: {fileID: 161604322631527622, guid: 01acef13d5b494da4aa3378a4133c13d, type: 3}
@@ -11516,7 +11519,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.5841227, y: 0}
+  m_Offset: {x: 4.5841227, y: 0.18152505}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11527,7 +11530,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.23864, y: 2.4}
+  m_Size: {x: 12.23864, y: 2.03695}
   m_EdgeRadius: 0
 --- !u!212 &1125264013
 SpriteRenderer:
@@ -11678,7 +11681,7 @@ GameObject:
   - component: {fileID: 1135180332}
   m_Layer: 0
   m_Name: King
-  m_TagString: Untagged
+  m_TagString: FinalEvent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17087,6 +17090,7 @@ MonoBehaviour:
   choices:
   - {fileID: 972598760}
   - {fileID: 922949398}
+  finalChoice: 0
 --- !u!1 &1790641049
 GameObject:
   m_ObjectHideFlags: 0
