@@ -8,7 +8,5 @@ public class Collision : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisionInfo) {
         playerInRange = true;
-        // Debug.Log("Player in range: " + collisionInfo);
-
     }
 }

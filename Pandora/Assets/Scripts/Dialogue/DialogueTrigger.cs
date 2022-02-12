@@ -24,13 +24,10 @@ public class DialogueTrigger : MonoBehaviour
         playerInRange = false;
         visualCue.SetActive(false);
     }
-
-
     private void Update() 
     {
         if (playerInRange) {
             visualCue.SetActive(true);
-            // Debug.Log("Visual cue active:" + visualCue.activeSelf);
             if (Input.GetKeyDown("i")) {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
@@ -39,7 +36,6 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(false);
         }
     }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         
@@ -49,9 +45,7 @@ public class DialogueTrigger : MonoBehaviour
         if(gameObject.tag == "FinalEvent") {
             finalTrigger = true;
         }
-        // Debug.Log("Collision by:" + other + "Player in range: "+ playerInRange);
     }
-
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player") {

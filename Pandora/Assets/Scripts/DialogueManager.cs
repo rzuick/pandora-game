@@ -5,6 +5,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour 
 {
@@ -72,15 +73,16 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory() 
     {
-        Debug.Log("story can continue: "+ currentStory.canContinue);
         if (currentStory.canContinue) {
             dialogueText.text = currentStory.Continue();
-            Debug.Log("current choices: "+ currentStory.currentChoices.Count);
             DisplayChoices();
             continueIcon.SetActive(true);
         }
         else {
             continueIcon.SetActive(false);
+            if (DialogueTrigger.finalTrigger) {
+                StartCoroutine("LoadLevel");
+            }
         }
     }
     private void ExitDialogue() 
@@ -124,12 +126,19 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChooseChoiceIndex(choiceIndex);
         if (DialogueTrigger.finalTrigger) {
             finalChoice = choiceIndex;
-        }
-        // Debug.Log("player chose:" + choiceIndex);
+            }  
         // will allow unity to continue to story progression, if there is any, after choice was selected
         ContinueStory();
     } 
-    
 
-    
+    IEnumerator LoadLevel ()
+    {
+        yield return new WaitForSeconds(3.0f);
+        if (finalChoice == 0) {
+            SceneManager.LoadScene(3);
+        }
+        if(finalChoice == 1) {
+            SceneManager.LoadScene(4);
+        }
+    }
 }
