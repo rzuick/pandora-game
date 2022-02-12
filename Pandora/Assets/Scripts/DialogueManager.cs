@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
     private Story currentStory;
-    public int finalChoice;
+    public static int finalChoice = -1;
     public bool dialogueIsPlaying {get; private set;}
     private static DialogueManager instance;
 
@@ -122,10 +122,10 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex) {
         // will allow unity to locate the index of the choice selected
         currentStory.ChooseChoiceIndex(choiceIndex);
-        if (DialogueTrigger.GetInstance().finalTrigger) {
+        if (DialogueTrigger.finalTrigger) {
             finalChoice = choiceIndex;
         }
-        Debug.Log("player chose:" + choiceIndex);
+        // Debug.Log("player chose:" + choiceIndex);
         // will allow unity to continue to story progression, if there is any, after choice was selected
         ContinueStory();
     } 

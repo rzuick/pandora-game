@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] private GameObject visualCue;
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
-    public bool finalTrigger;
+    public static bool finalTrigger;
     private static DialogueTrigger instance;
     public static DialogueTrigger GetInstance() {
         return instance;
