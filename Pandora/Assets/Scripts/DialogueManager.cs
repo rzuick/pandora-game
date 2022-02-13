@@ -81,7 +81,10 @@ public class DialogueManager : MonoBehaviour
         else {
             continueIcon.SetActive(false);
             if (DialogueTrigger.finalTrigger) {
-                StartCoroutine("LoadLevel");
+                if (!currentStory.canContinue) {
+                    
+                StartCoroutine(LoadLevel());
+                }
             }
         }
     }
@@ -133,7 +136,7 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator LoadLevel ()
     {
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(2.0f);
         if (finalChoice == 0) {
             SceneManager.LoadScene(3);
         }

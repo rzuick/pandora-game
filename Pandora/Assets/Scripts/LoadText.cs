@@ -9,6 +9,8 @@ public class LoadText : MonoBehaviour
     [SerializeField] float typeSpeed;
     TMP_Text storyText;
     string writer;
+    public Animator transition;
+    public bool stillTyping = true;
     void Start()
     {
         storyText = GetComponent<TMP_Text>();
@@ -17,7 +19,13 @@ public class LoadText : MonoBehaviour
 
         // coroutine for updating text
         StartCoroutine("TypeText");
+    }
 
+    void Update() 
+    {
+        if (!stillTyping) {
+            StartCoroutine("EndGame");
+        }
     }
     IEnumerator TypeText ()
     {
@@ -26,5 +34,12 @@ public class LoadText : MonoBehaviour
             storyText.text += c;
             yield return new WaitForSeconds(typeSpeed);
         }
+        stillTyping = false;
+    }
+     IEnumerator EndGame () 
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(0);
     }
 }
