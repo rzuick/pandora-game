@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: transition
       value: 
       objectReference: {fileID: 631947377}
+    - target: {fileID: 5916953614706423390, guid: e4a9d77e2beb54c778bfb00908d9322f, type: 3}
+      propertyPath: transitionDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7514487336460378116, guid: e4a9d77e2beb54c778bfb00908d9322f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -243,6 +247,7 @@ MonoBehaviour:
   transition: {fileID: 631947377}
   stillTyping: 1
   levelToLoad: 5
+  startTransition: 3
 --- !u!114 &1310466482
 MonoBehaviour:
   m_ObjectHideFlags: 0

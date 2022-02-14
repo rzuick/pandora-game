@@ -321,6 +321,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5916953614706423390, guid: e4a9d77e2beb54c778bfb00908d9322f, type: 3}
+      propertyPath: transition
+      value: 
+      objectReference: {fileID: 654494843}
+    - target: {fileID: 5916953614706423390, guid: e4a9d77e2beb54c778bfb00908d9322f, type: 3}
+      propertyPath: transitionDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7514487336460378116, guid: e4a9d77e2beb54c778bfb00908d9322f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -434,17 +442,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>Community</b>\nAll you wonderful folx in the ~tiredfolk community!\nY'all
-    were inspirational and got me and I couldn't have done it without you!\n\n<b>
-    OpenGameArt.Org </b>\n\nsnake sprite: Basxto and Yolkati\nberry garden: Bart
-    kelsey\nwelcomer: Cabbit, Diamonddmgirl, and AntumDeluge\nfountain: Diarandor
-    for Children of Solarus\nbench: Hyptosis and AntumDeluge\npriest Sprite: Cabbit
-    and AntumDeluge\narmor Outfit: AntumDeluge\nold-man Sprite: Srsly\nfantasy Elements
-    interface: Ravenmore\nmedieval Buttons: pzUH\n\n<b> unity asset store</b>\n\neight-bit
-    fantasy and Adventure Music: xDeviruchi\npixel art pack: freeThePlayerOnGame
-    \ntwo-dimensional fantasy forest tileset: Hyper Luminal Games\ntiny rpg Town
-    Environment: Ansimuz\nfantasy rpg  Tileset Pack: Jason Perry\nink unity Integration:
-    Inkle"
+  m_text: "Community\nAll you wonderful folx in the ~tiredfolk community!\nY'all
+    were inspirational and got me and I couldn't have done it without you!\n\nOpenGameArt.Org\n\nsnake
+    sprite: basxto and yolkati\nberry garden: bart kelsey\nwelcomer: cabbit, diamonddmgirl,
+    and antumdeluge\nfountain: diarandor for Children of Solarus\nbench: hyptosis
+    and antumdeluge\npriest Sprite: cabbit and antumdeluge\narmor Outfit: antumdeluge\nold-man
+    Sprite: srsly\nfantasy Elements interface: ravenmore\nmedieval Buttons: pzuh\n\nunity
+    asset store\n\neight-bit fantasy and Adventure Music: xDeviruchi\npixel art pack:
+    freeThePlayerOnGame \ntwo-dimensional fantasy forest tiles: hyper luminal games\ntiny
+    rpg Town Environment: ansimuz\nfantasy rpg  Tileset Pack: jason perry\nink unity
+    Integration: inkle\n\nthank you for playing!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -477,7 +484,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 9
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -533,10 +540,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcf025aa4ccc40a386e7b322215125c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeSpeed: 0.4
+  typeSpeed: 0.05
   transition: {fileID: 654494843}
   stillTyping: 1
   levelToLoad: 0
+  startTransition: 4
 --- !u!1 &950936586
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +556,7 @@ GameObject:
   - component: {fileID: 950936589}
   - component: {fileID: 950936588}
   - component: {fileID: 950936587}
+  - component: {fileID: 950936590}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -620,3 +629,99 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &950936590
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950936586}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 513197e4ea0798a4aa5c273b234bf22b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.428
+  m_Pitch: 1.38
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
