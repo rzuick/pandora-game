@@ -15,7 +15,7 @@ The first version of this game is based on Mufaro's Beautiful Daughters by John 
 4. Inkle Scripting Language
 
 ## Accessing the Game
-* Simply visit itch.io
+* Simply visit [Mufaro's Daughter](https://zwick.itch.io/mufaros-daughter)
 ## Playing the Game
 Click the Play button to start. 
 * Player controls
