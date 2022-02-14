@@ -11,4 +11,4 @@ What will you do?
 + [Walk around the village. Maybe someone knows something?]
     You head towards the village market, near the center of town.
     [Head to market]
-    -> END
+    -> DONE

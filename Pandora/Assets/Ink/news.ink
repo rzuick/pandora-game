@@ -16,13 +16,13 @@ You note the excited and concerned look on his face.
 "The king's herald just left, child. With him he brought quite the news. The king has decided that he is reaching an age of abdication. 
 Since he has no heirs, the king has put out a call for all the beautiful young people in the land to journey to the capital. 
 He says he will choose the most beautiful person as his successor!"
-
 You are shocked at your father's news. Being queen would bring your family and village honor and prestige, but it would also be a grave responsibility. 
 
 + [Accept the invitation and leave?]
 "Baba, this is too great of an opportunity to pass up. With your blessing, I will go and visit the capital. 
 Even if I am not chosen, I can still make great friends for our people."
 Your father packs a small bag of essentials for your journey to the capital. You leave, wishing him well in your absence...
+[Follow the path out of the village]
     -> END
 + [Decline the invitation and stay.]
 "What wonderful news! Thank you for considering me, Baba, but I would rather stay here.

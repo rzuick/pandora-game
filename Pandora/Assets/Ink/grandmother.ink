@@ -11,7 +11,7 @@ You pause upon seeing an elderly woman sitting on a stone on the side of the roa
         "Thank you child. As appreciation for your kindness, I will warn you. On the path ahead you will come across a grove of laughing trees. 
         You must not laugh at them, for they will take offense and be of ill-temper."
         You nod in appreciation and thank the elderly woman, giving her an extra bag of seeds before continuing on your journey.
-        [Keep walking]
+        [Keep walking on the path]
         ->DONE
         * * You shake your head no
             [Continue walking along the path]

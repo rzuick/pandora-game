@@ -12,10 +12,11 @@ Before you can ask if he is alright, you notice that this is an odd man! His hea
     ++ [You smile and offer him your arm]
         "I do know. I'm on my way there now. Come, let us greet the king together."
         "Thank you, young one, but I shall stay here and rest a little longer."
-        [You nod and wave goodbye before continuing on to the capital]
+        [You nod and wave goodbye before continuing on the path to the capital]
         ->DONE
     ++ [You nod and wave goodbye before continuing on]
         "What an interesting man."
+        [Keep following the path]
         -> DONE
 + [Yell at the man]
     "How rude! You cannot just stand in the middle of the road. You don't get special treatment just for being...different. Go on, out of the way!"

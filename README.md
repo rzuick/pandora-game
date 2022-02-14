@@ -1,9 +1,9 @@
-# Pandora: A 2D Folktale RPG
+# Mufaro's Daughter: A 2D Folktale RPG
 
-![The word Pandora is on top of a background of a sunset over a grassy plain](/Pandora/Assets/Art/pandora.png)
+![The phrase Mufaro's Daughter is on top of a background of a sunset over a grassy plain](/Pandora/Assets/Art/mufaro.png)
 
 ## What It Is
-Pandora is a narrative 2D RPG that allows you to walk through a popular folktale as the protagonist, ultimately deciding the protagnist's fate in this retelling. 
+Mufaro's Daughter is a narrative 2D RPG that allows you to walk through a popular folktale as the protagonist, ultimately deciding the protagnist's fate in this retelling. 
 
 The first version of this game is based on Mufaro's Beautiful Daughters by John Steptoe. In that tale, a man named Mufaro has two beautiful daughters, Nyasha and Manyara. Where Nyasha is kind and considerate, Manyara is considered to be a bully and bad-tempered. When the king announces he is looking for the most beautiful woman in the kingdom to be his queen, Mufaro decides to send both of his daughters. Along the way, each daughter is presented with the same challenge, though they handle it in vastly different ways.
 
@@ -15,7 +15,15 @@ The first version of this game is based on Mufaro's Beautiful Daughters by John 
 4. Inkle Scripting Language
 
 ## Accessing the Game
-Simply visit itch.io
+* Simply visit itch.io
+## Playing the Game
+Click the Play button to start. 
+* Player controls
+    * WASD/Arrow keys for movement
+    * "I" to interact with an object with a visual cue
+    * "Enter"/"Return" to continue dialogue
+    * "Space" to make choice selection in dialogue
+    * "E" to exit dialogue box
 
 ## My Approach
 I wanted this story to be easily played by one person. So, instead of creating two playable characters, I created one. The difference in how the story played out would come from the choices the player made. 

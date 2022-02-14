@@ -199,8 +199,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "And so it was that the kingdom rejoiced in the selection of their new
-    queen. \n\nThe people called her Pandora, an ode to her triumph over dark times
-    and her role as the champion of the people's hope. "
+    queen. \n\nThe people called her Nyasha, for grace. It was by the grace of her
+    character and strength of her compassion that the kingdom continued to thrive
+    and grow, even after the old king had gone. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -227,10 +228,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 24
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1

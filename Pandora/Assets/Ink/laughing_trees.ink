@@ -8,9 +8,10 @@ You suddenly remembered the warning Grandmother gave you and realize she was qui
 
 + [You decide to respect the trees and their privacy.]
     You lower your head to make yourself as inconspicuous as possible and skurry by. Who are you to disturb their joy.
+    [Keep following the path]
     ->DONE
 + [Grandmother couldn't be right about everything.]
     You refuse to be cowed by some odd trees. You laugh, loudly, and stare at the trees defiantly.
     The trees' laughter turns to shrieking, their cries piercing the air. You run as fast as you can to escape them, hands covering your ears.
+    [Follow the dirt path]
     ->DONE
-

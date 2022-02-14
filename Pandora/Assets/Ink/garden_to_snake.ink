@@ -12,7 +12,8 @@ What was that sound?
     You look around the garden uncertainly. You haven't seen a snake in a very long time. Hopefully it was a loose cat instead.
     -> snake_encounter
 + [Ignore it. Nothing will ruin this quiet.]
-    You bask in the sun, similar to the snake you saw earlier. But now it is time to see Baba. 
+    You bask in the sun, similar to the snake you saw earlier. But now it is time to see Baba.
+    [Head to your father]
     -> END
 
 === snake_encounter ===
@@ -28,14 +29,12 @@ Snakes have been said to be omens of great fortune or terrible misfortune.
     -> END
     
 === snake_friend === 
-<i>"Greetingssss to you, young human. Thank you for this ssssmall kindnesssss.
-I have been long wandering for ssssome ssssuch gesture."</i>
-
+<i>"Greetingssss to you, young human. Thank you for this ssssmall kindnesssss.</i>
+<i>I have been long wandering for ssssome ssssuch gesture."</i>
 Surprised as you are, you manage to dip your head in acknowledgement. Now is not the time to be rude.
-
 <i>"Would you have water to spare? I am parched."</i>
     [The snake slithers his tongue at you]
-
 + [Offer to grab the snake a cup from your home.] 
 <i>"No rush my dear. I don't mind waiting."</i>
+[Head towards your father]
     -> END
