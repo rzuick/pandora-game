@@ -11,6 +11,7 @@ public class LoadText : MonoBehaviour
     string writer;
     public Animator transition;
     public bool stillTyping = true;
+    public int levelToLoad;
     void Start()
     {
         storyText = GetComponent<TMP_Text>();
@@ -40,6 +41,6 @@ public class LoadText : MonoBehaviour
     {
         transition.SetTrigger("Start");
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(levelToLoad);
     }
 }
