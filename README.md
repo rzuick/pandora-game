@@ -3,7 +3,7 @@
 ![The phrase Mufaro's Daughter is on top of a background of a sunset over a grassy plain](/Pandora/Assets/Art/mufaro.png)
 
 ## What It Is
-Mufaro's Daughter is a narrative 2D RPG that allows you to walk through a popular folktale as the protagonist, ultimately deciding the protagnist's fate in this retelling. 
+   Mufaro's Daughter is a narrative 2D RPG that allows you to walk through a popular folktale as the protagonist, ultimately deciding the protagnist's fate in this retelling. This game is the result of a concept for the Cohort 16 Capstone project for [Ada Developer's Academy](https://adadevelopersacademy.org).
 
 The first version of this game is based on Mufaro's Beautiful Daughters by John Steptoe. In that tale, a man named Mufaro has two beautiful daughters, Nyasha and Manyara. Where Nyasha is kind and considerate, Manyara is considered to be a bully and bad-tempered. When the king announces he is looking for the most beautiful woman in the kingdom to be his queen, Mufaro decides to send both of his daughters. Along the way, each daughter is presented with the same challenge, though they handle it in vastly different ways.
 
