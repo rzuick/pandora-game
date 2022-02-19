@@ -10,6 +10,12 @@ public string LevelName;
 
 public void LoadLevel()
 {
-    SceneManager.LoadScene(LevelName);
+    // SceneManager.LoadScene(LevelName);
+    StartCoroutine(Load(LevelName));
+}
+
+IEnumerator Load(string name) {
+    yield return new WaitForSeconds(3.0f);
+    SceneManager.LoadScene(name);
 }
 }

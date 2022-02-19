@@ -9,7 +9,10 @@ public class LoadIntroText : MonoBehaviour
     [SerializeField] float timeToLoadNewScene;
     [Header("Type Speed")]
     [SerializeField] float typeSpeed;
+    [Header("Button Toggle")]
+    [SerializeField] private GameObject button;
     TMP_Text storyText;
+    public bool textTyping = true;
     string writer;
     public string LevelName;
     void Start()
@@ -17,12 +20,11 @@ public class LoadIntroText : MonoBehaviour
         storyText = GetComponent<TMP_Text>();
         writer = storyText.text;
         storyText.text = "";
+        button.SetActive(false);
 
         // coroutine for updating text
         StartCoroutine("TypeText");
 
-        // coroutine for loading next level
-        StartCoroutine("LoadLevel");
     }
     IEnumerator TypeText ()
     {
@@ -31,15 +33,10 @@ public class LoadIntroText : MonoBehaviour
             storyText.text += c;
             yield return new WaitForSeconds(typeSpeed);
         }
-    }
-    IEnumerator LoadLevel ()
-    {
-        if (LevelName == null) {
-            yield break;
-        }
-        else {
-        yield return new WaitForSeconds(timeToLoadNewScene);
-        SceneManager.LoadScene(LevelName);
+        textTyping = false;
+        if (textTyping == false) {
+            button.SetActive(true);
         }
     }
+
 }

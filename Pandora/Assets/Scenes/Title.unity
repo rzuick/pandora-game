@@ -376,6 +376,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5708834087283307171, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5708834088742298350}
+    - target: {fileID: 5708834087283307171, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708834087283307198, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
+      propertyPath: LevelName
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5708834088361971235, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -484,8 +496,27 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4278260004
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5708834087283307198, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
+--- !u!1 &5708834088742298349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5708834087283307169, guid: a25898b7df7824ac3a02e6d8b3b9c2ec, type: 3}
+  m_PrefabInstance: {fileID: 5708834088742298348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5708834088742298350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708834088742298349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14da2999478c4dab9d16c2dc7ac6ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelName: Intro to Story
 --- !u!1001 &7514487335455245817
 PrefabInstance:
   m_ObjectHideFlags: 0
